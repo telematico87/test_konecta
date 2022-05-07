@@ -1,0 +1,198 @@
+*, html, body{
+    padding: 0;
+    margin:0;
+    color: white;
+}
+body{
+    overflow: hidden;
+}
+
+.contenedor-title{
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+.contenedor-title h1{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/*Estilos tabla index*/
+.padre-tarjetas-usuarios{
+    padding: 0 80px;
+    position: relative;
+}
+.contenedor-tarjeta-usuario{
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    transition: .5s;
+
+}
+.contenedor-tarjeta-usuario::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #13193d;
+    height: 0%;
+    left: 0;
+    border-radius: 20px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    z-index: -1;
+}
+.contenedor-tarjeta-usuario:hover{
+    transform: scale(1.03);
+    transition: .5s;
+}
+.contenedor-tarjeta-usuario:hover ul li{
+    color:  #0b81c2 !important;
+    transition: .5s;
+}
+.contenedor-tarjeta-usuario:hover .contenedor-titulos-usuario::after{
+    background:  #0b81c2 !important;
+    transition: .5s;
+}
+
+.contenedor-tarjeta-usuario:hover::after{
+    height: 100%;
+    transition: .5s;
+}
+.contenedor-titulos-usuario{
+    height: 100px;
+    position: relative;
+}
+.contenedor-titulos-usuario::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.contenedor-titulos-usuario h4{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 10px
+}
+.contenedor-titulos-usuario p{
+    font-size: 12px;
+    font-weight: 100;
+    position: relative;
+}
+.contenedor-descrip-usuario ul{
+    position: relative;
+    font-size: 12px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+.contenedor-descrip-usuario ul li{
+color :white;
+
+    transition: 0.5s;
+} 
+
+.contendorbotoneditar{
+    position: relative;
+    width:100%;
+    padding-bottom: 15px;
+    text-align: center;
+
+}
+
+/*Estilos agregar usuario*/
+.contenedor-formulario-usuario{
+    text-align:center;
+    color: #fff;
+    padding: 120px;
+}
+.contenedor-formulario-usuario label {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 500px;
+    position: relative;
+}
+.contenedor-formulario-usuario input[type=text], .contenedor-formulario-usuario input[type=email],.contenedor-formulario-usuario input[type=number] {
+    width: 100%;
+    height: 38px;
+    color: #fff;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 2px solid #000;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    margin-bottom: 35px;
+    margin-top: 5px;
+}
+.registro{
+    background: #fff;
+    border-radius: 2vh;
+    padding: 8px 10px;
+    font-size: 8px;
+    color: #753bbd;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-box-shadow: 1px 4px 17px rgba(0,0,0,.2);
+    box-shadow: 1px 4px 17px rgba(0,0,0,.2);
+    border-style: none;
+    cursor: pointer;
+}
+.editar{
+    background: #35b4df;
+    border-radius: 2vh;
+    padding: 8px 10px;
+    font-size: 8px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-box-shadow: 1px 4px 17px rgba(0,0,0,.2);
+    box-shadow: 1px 4px 17px rgba(0,0,0,.2);
+    border-style: none;
+    cursor: pointer;
+}
+.agregar{
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.degradado{
+    width: 200%;
+    position: fixed;
+    height: 200%;
+    z-index: -1;
+    background: linear-gradient(49deg, #080808, #0b81c2, #6cccef, #dcdcdc);
+    background-size: 800% 800%;
+    -webkit-animation: factory 11s ease infinite;
+    -moz-animation: factory 11s ease infinite;
+    animation: factory 11s ease infinite;
+}
+
+@-webkit-keyframes factory {
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
+}
+@-moz-keyframes factory {
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
+}
+@keyframes factory { 
+    0%{background-position:92% 0%}
+    50%{background-position:9% 100%}
+    100%{background-position:92% 0%}
+}
